@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de tecnología</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        :root {
+            --accent: #8b5cf6
+        }
+
+        .nav-link.active {
+            color: var(--accent) !important
+        }
+
+        .hero-rest {
+            background: url('https://picsum.photos/seed/restaurant-hero/1600/900') center/cover no-repeat;
+            min-height: 65vh
+        }
+
+        .glass {
+            backdrop-filter: blur(6px);
+            background: rgba(255, 255, 255, .75)
+        }
+
+        .menu-item {
+            border-bottom: 1px dashed #e5e7eb;
+            padding-bottom: .75rem;
+            margin-bottom: .75rem
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Casa Sabor</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navR"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navR">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservas">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-rest d-grid align-items-end text-white">
+        <div class="container py-5">
+            <div class="col-lg-7 p-4 rounded-4 glass">
+                <h1 class="display-5 fw-bold">Cocina de autor con raíces locales</h1>
+                <p class="lead mb-0">Ingredientes de temporada y emplatados que enamoran.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="h3 mb-4">Menú</h2>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h5 class="text-muted">Entradas</h5>
+                    <div class="menu-item d-flex justify-content-between"><span>Tartar de atún</span><span>€14</span>
+                    </div>
+                    <div class="menu-item d-flex justify-content-between"><span>Crema de calabaza</span><span>€9</span>
+                    </div>
+                    <h5 class="mt-4 text-muted">Platos fuertes</h5>
+                    <div class="menu-item d-flex justify-content-between"><span>Solomillo con pesto de
+                            nuez</span><span>€24</span></div>
+                    <div class="menu-item d-flex justify-content-between"><span>Risotto de setas</span><span>€18</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="text-muted">Postres</h5>
+                    <div class="menu-item d-flex justify-content-between"><span>Coulant de
+                            chocolate</span><span>€8</span></div>
+                    <div class="menu-item d-flex justify-content-between"><span>Tarta de queso</span><span>€7</span>
+                    </div>
+                    <div class="p-4 bg-light rounded-4 mt-4">
+                        <h6>Experiencia Degustación</h6>
+                        <p class="small mb-2">6 tiempos · maridaje opcional</p>
+                        <a class="btn btn-outline-primary btn-sm" href="#reservas">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <h2>Reservas</h2>
+                    <p class="small">Abierto de martes a domingo. Código de vestimenta casual elegante.</p>
+                    <ul class="small">
+                        <li>Salón principal y terraza</li>
+                        <li>Opción vegetariana/vegana</li>
+                        <li>Eventos privados</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <form class="row g-3 bg-white p-4 rounded-4 shadow">
+                        <div class="col-md-6"><label class="form-label">Nombre</label><input class="form-control"
+                                required></div>
+                        <div class="col-md-3"><label class="form-label">Fecha</label><input type="date"
+                                class="form-control" required></div>
+                        <div class="col-md-3"><label class="form-label">Personas</label><input type="number" min="1"
+                                value="2" class="form-control"></div>
+                        <div class="col-12"><label class="form-label">Notas</label><textarea class="form-control"
+                                rows="3"></textarea></div>
+                        <div class="col-12"><button class="btn btn-primary">Solicitar mesa</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-5">
+        <div class="container">
+            <div id="gal" class="carousel slide">
+                <div class="carousel-inner rounded-4 overflow-hidden shadow">
+                    <div class="carousel-item active"><img class="d-block w-100"
+                            src="https://picsum.photos/seed/dish1/1200/600" alt="Plato 1"></div>
+                    <div class="carousel-item"><img class="d-block w-100"
+                            src="https://picsum.photos/seed/dish2/1200/600" alt="Plato 2"></div>
+                    <div class="carousel-item"><img class="d-block w-100" src="https://picsum.photos/seed/room/1200/600"
+                            alt="Salón"></div>
+                </div>
+                <button class="carousel-control-prev" data-bs-target="#gal" data-bs-slide="prev"><span
+                        class="carousel-control-prev-icon"></span></button>
+                <button class="carousel-control-next" data-bs-target="#gal" data-bs-slide="next"><span
+                        class="carousel-control-next-icon"></span></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 border-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h3>Contacto</h3>
+                    <p class="small">Av. Gourmet 123 · Madrid</p>
+                    <p class="small">Tel. +34 600 000 000 · reservas@casasabor.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

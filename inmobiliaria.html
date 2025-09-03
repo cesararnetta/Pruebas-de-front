@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de tecnología</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        :root {
+            --accent: #10b981
+        }
+
+        .navbar-brand span {
+            color: var(--accent)
+        }
+
+        .card img {
+            height: 190px;
+            object-fit: cover
+        }
+
+        .badge-type {
+            background: var(--accent)
+        }
+
+        .offcanvas-header {
+            border-bottom: 1px solid #f1f5f9
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Viva<span>Prop</span></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navV"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navV">
+                <form class="d-flex ms-auto gap-2">
+                    <select class="form-select form-select-sm">
+                        <option>Comprar</option>
+                        <option>Alquilar</option>
+                    </select>
+                    <input class="form-control form-control-sm" placeholder="Ciudad o zona">
+                    <button class="btn btn-success btn-sm">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row g-4">
+            <!-- Propiedad 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/home1/800/500" class="card-img-top" alt="Piso Centro">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Piso céntrico 2H</h5>
+                            <span class="badge badge-type">Venta</span>
+                        </div>
+                        <p class="small text-muted mb-2">Calle Mayor · 78 m² · 2 hab · 1 baño</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>€240,000</strong>
+                            <button class="btn btn-outline-success btn-sm" data-bs-toggle="offcanvas"
+                                data-bs-target="#prop1">Ver ficha</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Propiedad 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/home2/800/500" class="card-img-top" alt="Chalet">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Chalet con jardín</h5>
+                            <span class="badge badge-type">Alquiler</span>
+                        </div>
+                        <p class="small text-muted mb-2">Zona Norte · 140 m² · 3 hab · 2 baños</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>€1,250/mes</strong>
+                            <button class="btn btn-outline-success btn-sm" data-bs-toggle="offcanvas"
+                                data-bs-target="#prop2">Ver ficha</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Propiedad 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/home3/800/500" class="card-img-top" alt="Estudio">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">Estudio luminoso</h5>
+                            <span class="badge badge-type">Venta</span>
+                        </div>
+                        <p class="small text-muted mb-2">Barrio Arte · 42 m² · 1 amb · 1 baño</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>€129,000</strong>
+                            <button class="btn btn-outline-success btn-sm" data-bs-toggle="offcanvas"
+                                data-bs-target="#prop3">Ver ficha</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Fichas Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="prop1">
+        <div class="offcanvas-header">
+            <h5>Piso céntrico 2H</h5><button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body small">
+            <p>Orientación sur, reformado 2023, cocina equipada. Comunidad: €45/mes.</p>
+            <ul>
+                <li>Ascensor</li>
+                <li>Balcón</li>
+                <li>Calefacción individual</li>
+            </ul>
+            <button class="btn btn-success">Solicitar visita</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="prop2">
+        <div class="offcanvas-header">
+            <h5>Chalet con jardín</h5><button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body small">
+            <p>Amueblado, admite mascotas, garaje para 2 autos.</p>
+            <ul>
+                <li>Parrilla</li>
+                <li>Aire acondicionado</li>
+                <li>Domótica básica</li>
+            </ul>
+            <button class="btn btn-success">Solicitar visita</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="prop3">
+        <div class="offcanvas-header">
+            <h5>Estudio luminoso</h5><button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body small">
+            <p>Ideal para estudiantes o inversión. Gastos bajos.</p>
+            <ul>
+                <li>Lavadero común</li>
+                <li>Seguridad 24/7</li>
+            </ul>
+            <button class="btn btn-success">Solicitar visita</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
