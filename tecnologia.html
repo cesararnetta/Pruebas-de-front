@@ -22,7 +22,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #0ea5e933, #22d3ee33), url('https://picsum.photos/seed/tech-hero/1600/700') center/cover no-repeat;
+            background: linear-gradient(135deg, #0000009f, #0000009f), url('https://cdn.pixabay.com/photo/2020/08/09/14/25/business-5475661_1280.jpg') center/cover no-repeat;
         }
 
         .hero .display-5 {
@@ -85,7 +85,7 @@
                     <a href="#productos" class="btn btn-light btn-lg me-2">Ver catálogo</a>
                     <a href="#contacto" class="btn btn-outline-light btn-lg">Asesoría</a>
                 </div>
-                <div class="col-lg-5">
+                <!-- <div class="col-lg-5">
                     <div class="bg-white text-dark p-4 rounded-4 shadow-soft sticky-cta">
                         <h5 class="mb-3">Plan Web Básica para Tech</h5>
                         <ul class="list-unstyled small mb-4">
@@ -96,7 +96,7 @@
                         </ul>
                         <a class="btn btn-primary w-100" href="#contacto">Solicitar demo</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>
@@ -116,10 +116,11 @@
                 <!-- Producto 1 -->
                 <div class="col-md-6 col-lg-4" data-category="audio">
                     <div class="card h-100 shadow-soft">
-                        <img src="https://picsum.photos/seed/tech1/600/400" class="card-img-top" alt="Auriculares">
+                        <img src="https://cdn.pixabay.com/photo/2022/06/21/21/15/audio-7276511_1280.jpg"
+                            class="card-img-top" alt="Auriculares">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start">
-                                <h5 class="card-title">Auriculares ANC Pro</h5>
+                                <h5 class="card-title">Auriculares</h5>
                                 <span class="badge badge-new">Nuevo</span>
                             </div>
                             <p class="card-text small">Cancelación activa, 40h de batería, carga rápida.</p>
@@ -131,10 +132,10 @@
                 <!-- Producto 2 -->
                 <div class="col-md-6 col-lg-4" data-category="hogar">
                     <div class="card h-100 shadow-soft">
-                        <img src="https://picsum.photos/seed/tech2/600/400" class="card-img-top"
-                            alt="Enchufe inteligente">
+                        <img src="https://cdn.pixabay.com/photo/2020/01/11/18/13/alexa-4758340_1280.jpg"
+                            class="card-img-top" alt="Casa inteligente">
                         <div class="card-body">
-                            <h5 class="card-title">Enchufe Inteligente Wi‑Fi</h5>
+                            <h5 class="card-title">Casa inteligente</h5>
                             <p class="card-text small">Control por voz, programación y monitoreo de consumo.</p>
                             <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
                                 data-bs-target="#m2">Ver ficha</button>
@@ -144,9 +145,10 @@
                 <!-- Producto 3 -->
                 <div class="col-md-6 col-lg-4" data-category="movilidad">
                     <div class="card h-100 shadow-soft">
-                        <img src="https://picsum.photos/seed/tech3/600/400" class="card-img-top" alt="Scooter">
+                        <img src="https://cdn.pixabay.com/photo/2024/03/24/07/53/electric-scooter-8652595_1280.jpg"
+                            class="card-img-top" alt="Mono patin electrico">
                         <div class="card-body">
-                            <h5 class="card-title">Scooter Urbano X2</h5>
+                            <h5 class="card-title">Mono patín eléctrico</h5>
                             <p class="card-text small">Hasta 35 km, frenos de disco y suspensión dual.</p>
                             <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
                                 data-bs-target="#m3">Ver ficha</button>
@@ -175,18 +177,31 @@
                 <div class="col-lg-7">
                     <div class="accordion shadow-soft" id="accSpecs">
                         <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse"
-                                    data-bs-target="#c1">¿Cómo seleccionamos productos?</button></h2>
-                            <div id="c1" class="accordion-collapse collapse show">
-                                <div class="accordion-body">Evaluamos calidad, garantía, disponibilidad y soporte del
-                                    fabricante.</div>
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+                                    ¿Cómo seleccionamos productos?
+                                </button>
+                            </h2>
+                            <div id="c1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                                data-bs-parent="#accSpecs">
+                                <div class="accordion-body">
+                                    Evaluamos calidad, garantía, disponibilidad y soporte del fabricante.
+                                </div>
                             </div>
                         </div>
+
                         <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button collapsed"
-                                    data-bs-toggle="collapse" data-bs-target="#c2">Política de envíos</button></h2>
-                            <div id="c2" class="accordion-collapse collapse">
-                                <div class="accordion-body">Envíos nacionales en 48–72h. Retiro en tienda disponible.
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+                                    Política de envíos
+                                </button>
+                            </h2>
+                            <div id="c2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                data-bs-parent="#accSpecs">
+                                <div class="accordion-body">
+                                    Envíos nacionales en 48–72h. Retiro en tienda disponible.
                                 </div>
                             </div>
                         </div>
@@ -202,7 +217,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="https://picsum.photos/seed/techtip1/600/400" class="card-img-top" alt="Blog">
+                        <img src="https://cdn.pixabay.com/photo/2016/10/09/20/27/bluetooth-1726772_1280.jpg" class="card-img-top" alt="Blog">
                         <div class="card-body">
                             <h5>Guía rápida: Bluetooth 5.3</h5>
                             <p class="small">Qué aporta frente a versiones anteriores y cómo aprovecharlo.</p>
@@ -211,7 +226,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="https://picsum.photos/seed/techtip2/600/400" class="card-img-top" alt="Blog">
+                        <img src="https://cdn.pixabay.com/photo/2018/07/31/09/12/smart-home-3574541_1280.jpg" class="card-img-top" alt="Blog">
                         <div class="card-body">
                             <h5>Smart Home sin complicaciones</h5>
                             <p class="small">Ecosistemas, protocolos y cómo empezar con poco presupuesto.</p>
@@ -220,7 +235,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100">
-                        <img src="https://picsum.photos/seed/techtip3/600/400" class="card-img-top" alt="Blog">
+                        <img src="https://cdn.pixabay.com/photo/2015/03/09/15/55/bridge-665928_1280.jpg" class="card-img-top" alt="Blog">
                         <div class="card-body">
                             <h5>Movilidad eléctrica urbana</h5>
                             <p class="small">Seguridad, normativa y cuidado de baterías.</p>
@@ -246,7 +261,7 @@
                         <div class="col-12"><button class="btn btn-primary">Enviar</button></div>
                     </form>
                 </div>
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="p-4 bg-white rounded-4 shadow-soft h-100">
                         <h5>Incluido en tu web básica</h5>
                         <ul class="small mb-0">
@@ -256,7 +271,7 @@
                             <li>Capacitación de uso (guía descargable)</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -270,8 +285,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Auriculares ANC Pro</h5><button class="btn-close"
-                        data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title">Auriculares</h5><button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <ul class="list-unstyled small m-0">
@@ -289,7 +303,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Enchufe Inteligente Wi‑Fi</h5><button class="btn-close"
+                    <h5 class="modal-title">Casa Inteligente</h5><button class="btn-close"
                         data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -307,7 +321,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Scooter Urbano X2</h5><button class="btn-close"
+                    <h5 class="modal-title">Mono patín eléctrico</h5><button class="btn-close"
                         data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
